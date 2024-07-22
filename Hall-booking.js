@@ -11,7 +11,9 @@ server.use(express.json());
  server.use("/Booking",BookingRouter);
  server.use("/Rooms",RoomsRouter)
 
-
+ server.get("/", (req, res) => {
+    res.send("Welcome to the Hall Booking API");
+  });
 
 const port =4000;
 server.listen(port,()=>{
